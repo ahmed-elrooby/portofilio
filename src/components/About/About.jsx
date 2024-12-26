@@ -5,6 +5,8 @@ import React from "react";
 // import ProfisSkills from "../ProfisSkills/ProfisSkills";
 // import Services from "../Services/Services";
 import { motion } from "framer-motion";
+import Services from "../Services/Services";
+import ProfisSkills from "../ProfisSkills/ProfisSkills";
 // import Lottie from "react-lottie-player";
 
 const About = () => {
@@ -60,9 +62,9 @@ const About = () => {
         <p className="m-auto text-[25px] text-gray-600  dark:text-gray-300 capitalize w-full  text-center mt-[25px]">
           👉 Code is like humor. When you have to explain it, it’s bad. Write clean, simple, and understandable code, so it speaks for itself.
         </p>
-        {/* <ProfisSkills /> */}
+        <ProfisSkills />
       </div>
-      {/* <Services /> */}
+      <Services />
     </>
   );
 };
