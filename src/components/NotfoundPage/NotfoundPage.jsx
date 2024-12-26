@@ -7,7 +7,7 @@ const NotFoundPage = () => {
 
 
   return <>
-    <div className='flex w-[95%] bg-white p-3 pt-[100px] rounded-lg dark:bg-[#171717]  mx-auto  sm:flex-col md:flex-row gap-3 justify-around items-center'>
+    <div className='flex w-[95%] p-3 pt-[100px] rounded-lg dark:bg-[#171717]  mx-auto  sm:flex-col md:flex-row gap-3 justify-around items-center'>
       <div className='flex flex-col items-center gap-3'>
         <p className="text-xl  capitalize font-bold text-[--main-color]">Page Not Found</p>
         <p className="text-md text-gray-500 mt-4">
