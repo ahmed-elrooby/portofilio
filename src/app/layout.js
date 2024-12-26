@@ -2,6 +2,8 @@ import { Montserrat_Alternates } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
+import ThemProviders from "@/Providers/ThemProviders";
+import { Toaster } from "react-hot-toast";
 
 const inter = Montserrat_Alternates({ subsets: ["latin"], weight: ["400", "700"] });
 export const metadata = {
@@ -11,16 +13,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
     <body
         className={`${inter.className}  bg-[#F1F5F9] dark:bg-[#171717]`}
       >
-        {/* <ThemProviders> */}
+        <ThemProviders>
           <Header />
           {children}
           <Footer />
-        {/* </ThemProviders> */}
-{/* <Toaster /> */}
+        </ThemProviders>
+<Toaster />
       </body>
     </html>
   );

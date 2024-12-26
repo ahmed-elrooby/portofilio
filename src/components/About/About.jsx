@@ -1,14 +1,14 @@
 "use client";
+import dynamic from "next/dynamic"
 import React from "react";
-// import aboutLottie from "../../Images/aboutLottie.json";
-// import about from "../../Images/about.json";
-// import ProfisSkills from "../ProfisSkills/ProfisSkills";
-// import Services from "../Services/Services";
+
+
 import { motion } from "framer-motion";
 import Services from "../Services/Services";
 import ProfisSkills from "../ProfisSkills/ProfisSkills";
-// import Lottie from "react-lottie-player";
-
+const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
+import aboutLottie from "../../Images/aboutLottie.json";
+import about from "../../Images/about.json";
 const About = () => {
   return (
     <>
@@ -28,13 +28,13 @@ const About = () => {
           >
             <h1 className="md:text-[30px]  text-[20px] flex items-center capitalize font-bold">
               Here's a quick introduction about me
-              {/* <Lottie
+              <Lottie
                 animationData={about}
                 className="md:w-[100px] w-[50px] h-[50px] md:h-[100px] max-w-full"
                 loop={true}
                 play
                 style={{ width: 150, height: 150 }}
-              /> */}
+              />
             </h1>
             <p className="text-[21px] leading-[2] capitalize">
               "Hi, I'm Ahmed Eid, a Frontend Developer from{" "}
@@ -52,11 +52,11 @@ const About = () => {
           opacity:1
       }}
           >
-            {/* <Lottie
+            <Lottie
               animationData={aboutLottie}
               className="max-w-full w-[350px] md:w-[400px]"
               loop={true}
-            /> */}
+            />
           </motion.div>
         </div>
         <p className="m-auto text-[25px] text-gray-600  dark:text-gray-300 capitalize w-full  text-center mt-[25px]">

@@ -6,7 +6,6 @@ import { HiMiniPresentationChartLine } from "react-icons/hi2";
 import { IoIosHome, IoMdMail } from "react-icons/io";
 import { motion } from "framer-motion";
 
-// تحميل Lottie فقط على المتصفح
 const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 import contact from "../../Images/contact.json";
 import Form from "./Form";

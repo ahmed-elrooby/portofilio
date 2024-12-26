@@ -2,6 +2,11 @@
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from 'framer-motion';
 import Introduce from "../Introduce/Introduce";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(()=>import("react-lottie-player"),{ssr:false});
+import welcome from "../../Images/welcom.json";
+import home from "../../Images/home.json"
 
 const Home = () => {
   return (
@@ -23,7 +28,12 @@ const Home = () => {
              }}
             className="mb-4 text-[30px] md:text-[50px] flex gap-1 items-center font-extrabold capitalize text-[#5dbcfc]">
               Hi everyone! 
-             
+              <Lottie
+                className="max-w-full w-[60px] h-[60px] md:w-[100px] md:h-[100px]"
+                loop={true}
+                animationData={welcome}
+                play
+              />
             </motion.h1>
             <div className="md:text-[45px] text-[25px] font-bold relative after:animate-pulse after:absolute dark:text-white text-gray-600 after:w-[250px] after:h-[250px] after:bg-[#5dbcfc30] after:content-[''] after:bottom-[150px] after:rounded-full after:right-[-36px]">
            <motion.div
@@ -69,6 +79,8 @@ const Home = () => {
               scale: 1,
             }}
            >
+                        <Lottie animationData={home} className="w-full" loop play/>
+
            </motion.div>
           </div>
         </div>

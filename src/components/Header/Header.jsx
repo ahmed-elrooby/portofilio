@@ -4,8 +4,8 @@ import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-// import ThemChanger from '@/Providers/ThemChanger'
 import { array } from './array'
+import ThemChanger from '@/Providers/ThemChanger'
 
 const Header = () => {
   const [open, setOpen] = useState(false)
@@ -45,7 +45,7 @@ const Header = () => {
               ></span>
             </div></li>
             <li className='lg:hidden block'>
-                {/* <ThemChanger/> */}
+                <ThemChanger/>
             </li>
          </ul>
             <ul 
@@ -63,7 +63,7 @@ className={`items-center bg-white shadow-lg rounded-md
                   </Link>
                 </li>
               ))}
-            {/* <li className='hidden lg:block'><ThemChanger /></li> */}
+            <li className='hidden lg:block'><ThemChanger /></li>
             </ul>
            
           </nav>

@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import emailjs from '@emailjs/browser';
 import { FaSpinner } from 'react-icons/fa'
-// import toast from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 const Form = () => {
     const [name, setName] = useState("")
